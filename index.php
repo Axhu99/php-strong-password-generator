@@ -52,7 +52,7 @@ function password_generator($length)
             </div>
         <?php endif;  ?>
         <!-- FORM -->
-        <form action="" method="GET" class="bg-light p-2">
+        <form action="" method="GET" class="p-2">
             <!-- Input di tipo NUMBER dove chiedo la lunghezza della password  -->
             <div class="row text-start">
                 <div class="col-8">
@@ -63,7 +63,7 @@ function password_generator($length)
                 </div>
             </div>
 
-            <button type="submit">invia</button>
+            <button type="submit" class="btn btn-success">invia</button>
         </form>
     </div>
 </body>

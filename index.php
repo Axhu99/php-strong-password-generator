@@ -1,32 +1,11 @@
 <?php
 
+require __DIR__ . '/utils/function.php';
+
 $length = $_GET['lenght_password'] ?? '';
 
 if (!empty($length)) {
     $password = password_generator($length);
-}
-
-function password_generator($length)
-{
-    $password = '';
-
-    $letters = 'abcdefghijklmnopqrstuvwxyz';
-    $numbers = '0123456789';
-    $symbols = '!@#$%^&*()_+';
-
-    $characters = $letters . strtoupper($letters) . $numbers . $symbols;
-
-    $total_characters = mb_strlen($characters);
-
-    while (mb_strlen($password) < $length) {
-        $random_index = rand(0, $total_characters - 1);
-
-        $random_character = $characters[$random_index];
-
-        $password .= $random_character;
-    }
-
-    return $password;
 }
 ?>
 
